@@ -1,0 +1,43 @@
+<div id="followingyou" class="text-center h-100">
+
+    <div id="map" style="width: 100%; height: 100vh">
+
+    </div>
+
+    <div id="userList">
+        <div id="accordion">
+            <ul id="listOfUsers">
+                {{#each user}}
+                    <li>
+                        <div id="{{this.client_id}}container" class="p-1">
+                            <a class="btn w-75 text-center"  style="background-color: #ffffff" data-toggle="collapse" data-target="#{{this.client_id}}" aria-expanded="false" aria-controls="{{this.client_id}}">
+                                <strong>{{this.client_id}}</strong>
+                            </a>
+
+                            <div class="collapse w-75 record" id="{{this.client_id}}" data-parent="#accordion">
+                                <form class="recordForm form-check-inline w-100">
+                                    <select class="form-control align-items-center" name="time">
+                                        <option name="Today">Today</option>
+                                        <option name="Yesterday">Yesterday</option>
+                                        <option name="This week">This week</option>
+                                    </select>
+                                    <button class="btn w-25 btn-primary" type="submit">Show</button>
+                                </form>
+
+                                <div class="recordMap">
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMa1xRCHjZ2Qur-XrSxeSTRxAou4p8AV0&"></script>
+        <script src="javascripts/main.js"></script>
+        <script src="javascripts/bootstrap.js"></script>
+
+    </div>
+</div>

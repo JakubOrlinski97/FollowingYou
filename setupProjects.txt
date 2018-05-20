@@ -1,0 +1,3 @@
+CREATE TABLE Projects (project_id INT AUTO_INCREMENT, title VARCHAR(30), description TEXT, link TEXT, PRIMARY KEY (project_id));
+INSERT INTO Projects (title, description, link) VALUES ("FollowingYou", "A live GPS tracker for any Android device.", "/followingyou");
+INSERT INTO Projects (title, description, link) VALUES ("3D", "Some shenanigans with WebGL, Three.js and Whitestorm.js.", "/3d");

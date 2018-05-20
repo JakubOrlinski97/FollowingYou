@@ -1,0 +1,5 @@
+create table users (user_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, username TEXT);
+
+create table currentStatus(user_id INT UNIQUE, positionX FLOAT(10,7), positionY FLOAT(10,7), positionZ FLOAT(10,7), velocityX FLOAT(10,7), velocityY FLOAT(10,7), velocityZ FLOAT(10,7), cameraLookAtX FLOAT(10,7), cameraLookAtY FLOAT(10,7), cameraLookAtZ FLOAT(10,7), updateTime TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP, FOREIGN KEY (user_id) REFERENCES users(user_id), PRIMARY KEY (user_id));
+
+insert into users(username) values ("Jake");

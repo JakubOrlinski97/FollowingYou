@@ -1,0 +1,20 @@
+
+
+<div id="animation">
+    <div id="title">
+
+    </div>
+
+    {{#each projects}}
+        <div id="{{this}}" class="project">
+            <div class="projectText">
+                <h2><strong>{{this.title}}</strong></h2>
+                <p>{{this.description}}</p>
+                <a href="{{this.link}}">See here</a>
+            </div>
+        </div>
+    {{/each}}
+</div>
+<script src="javascripts/animations.js"></script>
+<script src="javascripts/bootstrap.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
